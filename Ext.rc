@@ -1,0 +1,314 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "..\..\Inc\ccx.h"
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+#include "winver.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+1 VERSIONINFO
+ FILEVERSION 0,1,1,0
+ PRODUCTVERSION 0,1,1,0
+ FILEFLAGSMASK 0x0L
+#ifdef _DEBUG
+ FILEFLAGS 0x21L
+#else
+ FILEFLAGS 0x20L
+#endif
+ FILEOS 0x10001L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "Dynamic Arcade"
+            VALUE "FileDescription", "Select Object Extension"
+			VALUE "FileVersion", "0.11 Beta"
+            VALUE "LegalCopyright", "Copyright © 2006-2011 Dynamic Arcade"
+            VALUE "OriginalFilename", "Select.mfx"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Data
+//
+
+KPX_MAGICNUMBER RCDATA MOVEABLE PURE 
+BEGIN
+    0x2516, 0x5908
+END
+
+
+#if !defined(RUN_ONLY)
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+#if defined(APSTUDIO_INVOKED) || defined(EDITOR)
+#if defined(APSTUDIO_INVOKED)
+EXO_ICON$(EDITOR)       BITMAP                  "RES\\EXTICON.BMP"
+#else
+EXO_ICON                BITMAP                  "RES\\EXTICON.BMP"
+#endif
+#endif
+#if defined(APSTUDIO_INVOKED) || defined(EDITOR)
+#if defined(APSTUDIO_INVOKED)
+EXO_IMAGE$(EDITOR)      BITMAP                  "RES\\EXTIMG.BMP"
+#else
+EXO_IMAGE               BITMAP                  "RES\\EXTIMG.BMP"
+#endif
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+#if defined(APSTUDIO_INVOKED) || defined(EDITOR)
+#if defined(APSTUDIO_INVOKED)
+MN_CONDITIONS$(EDITOR) MENU 
+#else
+MN_CONDITIONS MENU 
+#endif
+BEGIN
+    POPUP ""
+    BEGIN
+        POPUP "Select by Alt Value"
+        BEGIN
+            MENUITEM "Single object with highest Alt Value",  CID_SelectHighestAltV
+            MENUITEM "Single object with lowest Alt Value",  CID_SelectLowestAltV
+//            MENUITEM "All objects with tied highest Alt Value",  CID_SelectTiedHighestAltV
+//            MENUITEM "All objects with tied lowest Alt Value",  CID_SelectTiedLowestAltV
+        END
+        POPUP "Select by display order"
+        BEGIN
+            MENUITEM "Select frontmost object",  CID_SelectFrontmost
+            MENUITEM "Select rearmost object",  CID_SelectRearmost
+//            MENUITEM "Compare to Z position",  CID_SelectByZ
+        END
+        POPUP "Select by number of objects"
+        BEGIN
+            MENUITEM "Select first X objects", CID_SelectFirst
+            MENUITEM "Select last X objects", CID_SelectLast
+            MENUITEM "Select object at index", CID_SelectIndex
+//            MENUITEM "Discard first X objects", CID_DiscardFirst
+//            MENUITEM "Discard last X objects", CID_DiscardLast
+//            MENUITEM "Randomly Select X objects", CID_SelectRandom
+//            MENUITEM "Randomly Discard X objects", CID_DiscardRandom
+        END
+        MENUITEM "Re-select all objects", CID_SelectAll
+        MENUITEM "Compare to n# of selected objects", CID_CompareSelected
+    END
+END
+#endif
+
+#if defined(APSTUDIO_INVOKED) || defined(EDITOR)
+#if defined(APSTUDIO_INVOKED)
+MN_EXPRESSIONS$(EDITOR) MENU 
+#else
+MN_EXPRESSIONS MENU 
+#endif
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "Count Selected Objects (Name)",  EID_GetSelectedByName
+        MENUITEM "Count Selected Objects (Fixed Value)",  EID_GetSelectedByFixed
+        MENUITEM SEPARATOR
+        MENUITEM "Retrieve Name of Object (Fixed Value)",  EID_GetNameByFixed
+//        MENUITEM SEPARATOR
+//        MENUITEM "Retrieve Highest Alt Value (Name)",  EID_GetHighestAltByName
+//        MENUITEM "Retrieve Highest Alt Value (Fixed Value)",  EID_GetHighestAltByFixed
+//        MENUITEM "Retrieve Lowest Alt Value (Name)",  EID_GetLowestAltByName
+//        MENUITEM "Retrieve Lowest Alt Value (Fixed Value)",  EID_GetLowestAltByFixed
+//        MENUITEM SEPARATOR
+//        MENUITEM "Retrieve Object Z-Order (Name)",  EID_GetZOrderByName
+//        MENUITEM "Retrieve Object Z-Order (Fixed Value)",  EID_GetZOrderByFixed
+        MENUITEM SEPARATOR
+    END
+END
+#endif
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""..\\..\\Inc\\ccx.h""\r\n"
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""winver.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    KPX_MARK                "MF2"
+    KPX_NAME                "Select Object Extension"
+END
+
+STRINGTABLE
+BEGIN
+    CID_SelectFirst                "%o: Select first %1 of %0"
+        CP0ID_SelectFirst          "Choose object"
+        CP1ID_SelectFirst          "Enter how many to select"
+    CID_SelectLast                 "%o: Select last %1 of %0"
+        CP0ID_SelectLast           "Choose object"
+        CP1ID_SelectLast           "Enter how many to select"
+    CID_DiscardFirst               "%o: Discard first %1 of %0"
+        CP0ID_DiscardFirst         "Choose object"
+        CP1ID_DiscardFirst         "Enter how many to discard from selection"
+    CID_DiscardLast                "%o: Discard last %1 of %0"
+        CP0ID_DiscardLast          "Choose object"
+        CP1ID_DiscardLast          "Enter how many to discard from selection"
+    CID_SelectIndex                "%o: Select %0 at index %1"
+        CP0ID_SelectIndex          "Choose object"
+        CP1ID_SelectIndex          "Enter index of object to select"
+/*    CID_SelectRandom               "%o: Randomly select %1 of %0"
+        CP0ID_SelectRandom         "Choose object"
+        CP1ID_SelectRandom         "Enter how many to select"
+    CID_DiscardRandom              "%o: Randomly discard %1 of %0"
+        CP0ID_DiscardRandom        "Choose object"
+        CP1ID_DiscardRandom        "Enter how many to discard"
+*/
+    CID_SelectAll                  "%o: Re-select all %0"
+        CP0ID_SelectAll            "Choose object"
+    CID_CompareSelected            "%o: Number of %0 selected by previous conditions %1"
+        CP0ID_CompareSelected      "Choose object"
+        CP1ID_CompareSelected      "Compare to number of selected objects"
+
+    CID_SelectHighestAltV          "%o: Select single %0 with the highest Alt. Value (%1)"
+        CP0ID_SelectHighestAltV    "Choose object"
+        CP1ID_SelectHighestAltV    "Enter the Alt. Value (0-25)"
+    CID_SelectLowestAltV           "%o: Select single %0 with the lowest Alt. Value (%1)"
+        CP0ID_SelectLowestAltV     "Choose object"
+        CP1ID_SelectLowestAltV     "Enter the Alt. Value (0-25)"
+/*    CID_SelectTiedHighestAltV      "%o: Select all %0 with the tied highest Alt. Value (%1)"
+        CP0ID_SelectTiedHighestAltV"Choose object"
+        CP1ID_SelectTiedHighestAltV"Enter the Alt. Value (0-25)"
+    CID_SelectTiedLowestAltV       "%o: Select all %0 with the tied lowest Alt. Value (%1)"
+        CP0ID_SelectTiedLowestAltV "Choose object"
+        CP1ID_SelectTiedLowestAltV "Enter the Alt. Value (0-25)"
+*/
+    CID_SelectFrontmost            "%o: Select Frontmost %0"
+        CP0ID_SelectFrontmost      "Choose object"
+    CID_SelectRearmost             "%o: Select Rearmost %0"
+        CP0ID_SelectRearmost       "Choose object"
+//    CID_SelectByZ                  "%o: Select %0 with Z %1"
+//        CP0ID_SelectByZ            "Choose object"
+//        CP1ID_SelectByZ            "Compare to Z coordinate"
+END
+
+STRINGTABLE
+BEGIN
+    EID_GetSelectedByName          "numSelectedByName("
+        EP0ID_GetSelectedByName    "Name of Object"
+    EID_GetSelectedByFixed         "numSelectedByFixedV("
+        EP0ID_GetSelectedByFixed   "Fixed Value of Object"
+
+    EID_GetNameByFixed             "NameFromFixedV$("
+        EP0ID_GetNameByFixed       "Fixed Value of Object"
+
+//    EID_GetHighestAltByName        "HighestAltByName("
+//        EP0ID_GetHighestAltByName  "Name of Object"
+//        EP1ID_GetHighestAltByName  "Alt Value (0-25)"
+//    EID_GetHighestAltByFixed       "HighestAltByFixedV("
+//        EP0ID_GetHighestAltByFixed "Fixed Value of Object"
+//        EP1ID_GetHighestAltByFixed "Alt Value (0-25)"
+//
+//    EID_GetLowestAltByName         "LowestAltByName("
+//        EP0ID_GetLowestAltByName   "Name of Object"
+//        EP1ID_GetLowestAltByName   "Alt Value (0-25)"
+//    EID_GetLowestAltByFixed        "LowestAltByFixedV("
+//        EP0ID_GetLowestAltByFixed  "Fixed Value of Object"
+//        EP1ID_GetLowestAltByFixed  "Alt Value (0-25)"
+
+//    EID_GetZOrderByName          "ZOrderByName("
+//        EP0ID_GetZOrderByName    "Name of Object"
+//    EID_GetZOrderByFixed         "ZOrderByFixedV("
+//        EP0ID_GetZOrderByFixed   "Fixed Value of Object"
+END
+
+STRINGTABLE
+BEGIN
+    IDST_OBJNAME            "Select Object Extension v0.11 Beta"
+    IDST_AUTHOR             "Gareth Ben Martin of Dynamic Arcade"
+    IDST_COPYRIGHT          "Copyright © 2006-2011 Dynamic Arcade"
+    IDST_COMMENT            "Selects objects through conditions such as ""Highest alterable value A"""
+    IDST_HTTP               "http://www.dynamicarcade.co.uk"
+END
+
+#endif  //Not RUN_ONLY
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
